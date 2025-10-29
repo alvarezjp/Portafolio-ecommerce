@@ -1,47 +1,107 @@
-import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '../ui/Button';
+import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { getCategoryProduct } from '../../server/GetProducts';
+import { Category, ProductCategory } from '../../server/Type/interface';
 
 interface Collection {
-  id: string;
+
   name: string;
   description: string;
   image: string;
-  itemCount: number;
   href: string;
 }
 
-interface FeaturedCollectionsProps {
-  onCollectionClick: (collectionId: string) => void;
+interface CategoryProducts {
+  [category: string]: ProductCategory[];
 }
 
-export function FeaturedCollections({ onCollectionClick }: FeaturedCollectionsProps) {
+const category = [
+  "mens-shirts",
+  "mens-shoes",
+  "mens-watches",
+  "womens-bags",
+  "womens-dresses",
+  "womens-shoes",
+  "womens-watches"
+]
+
+
+export function FeaturedCollections() {
+  const [allProduct, setAllProducts] = useState<CategoryProducts>();
+
+  useEffect(() => {
+    const fetchProduc = async () => {
+      try{
+        const result = await Promise.all(
+          category.map((cat) => getCategoryProduct<{ products: ProductCategory[] }>(cat))
+        );
+
+        const combined = category.reduce((acc,cat,index) => {
+          acc[cat]=result[index].products;
+          return acc
+        
+        },{} as CategoryProducts)
+
+        setAllProducts(combined);
+      } catch(error){
+        console.error('existe un error al tratar de traer todas las categorias',error)
+      }
+
+    }
+    fetchProduc();
+
+  }, [])
+ 
+  console.log('Estos son los items', allProduct )
+  const navigate = useNavigate();
   const collections: Collection[] = [
     {
       id: 'basics',
-      name: 'Básicos',
+      name: 'Camisas de hombre',
       description: 'Esenciales atemporales para tu guardarropa diario',
       image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800',
-      itemCount: 24,
       href: '/collections/basics'
     },
     {
-      id: 'sustainable',
-      name: 'Sostenible',
-      description: 'Moda consciente con materiales orgánicos y reciclados',
-      image: 'https://images.pexels.com/photos/5867364/pexels-photo-5867364.jpeg?auto=compress&cs=tinysrgb&w=800',
-      itemCount: 18,
-      href: '/collections/sustainable'
+      id: 'basics',
+      name: 'Zapatos de hombre',
+      description: 'Esenciales atemporales para tu guardarropa diario',
+      image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800',
+      href: '/collections/basics'
     },
     {
-      id: 'limited',
-      name: 'Edición Limitada',
-      description: 'Piezas exclusivas en cantidades limitadas',
-      image: 'https://images.pexels.com/photos/4210860/pexels-photo-4210860.jpeg?auto=compress&cs=tinysrgb&w=800',
-      itemCount: 12,
-      href: '/collections/limited'
-    }
+      id: 'basics',
+      name: 'Relojes de hombre',
+      description: 'Esenciales atemporales para tu guardarropa diario',
+      image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800',
+      href: '/collections/basics'
+    },
+    {
+      id: 'basics',
+      name: 'Relojes de mujer',
+      description: 'Esenciales atemporales para tu guardarropa diario',
+      image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800',
+      href: '/collections/basics'
+    },
+    {
+      id: 'basics',
+      name: 'Zapatos de mujer',
+      description: 'Esenciales atemporales para tu guardarropa diario',
+      image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800',
+      href: '/collections/basics'
+    },
+    {
+      id: 'basics',
+      name: 'Vestidos de mujer',
+      description: 'Esenciales atemporales para tu guardarropa diario',
+      image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800',
+      href: '/collections/basics'
+    },
+    
   ];
+
 
   return (
     <section className="py-20 bg-white">
@@ -60,7 +120,7 @@ export function FeaturedCollections({ onCollectionClick }: FeaturedCollectionsPr
             <div
               key={collection.id}
               className="group relative overflow-hidden rounded-2xl bg-slate-100 hover:shadow-2xl transition-all duration-500 cursor-pointer"
-              onClick={() => onCollectionClick(collection.id)}
+              onClick={() => navigate('/catalog')}
             >
               <div className="aspect-square overflow-hidden">
                 <img
@@ -69,9 +129,9 @@ export function FeaturedCollections({ onCollectionClick }: FeaturedCollectionsPr
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
-              
+
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-              
+
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                 <div className="mb-2">
                   <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium">
@@ -80,7 +140,7 @@ export function FeaturedCollections({ onCollectionClick }: FeaturedCollectionsPr
                 </div>
                 <h3 className="text-2xl font-bold mb-2">{collection.name}</h3>
                 <p className="text-white/90 mb-4">{collection.description}</p>
-                
+
                 <Button
                   variant="ghost"
                   className="text-white hover:bg-white/20 backdrop-blur-sm border-white/30 group-hover:translate-x-1 transition-transform duration-300"
