@@ -6,8 +6,9 @@ export const products: Product[] = [
     name: 'Camiseta Essential',
     price: 29990,
     images: [
-      'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/5867364/pexels-photo-5867364.jpeg?auto=compress&cs=tinysrgb&w=800'
+      'https://rimage.ripley.cl/home.ripley/Attachment/WOP/1/2000405622393/full_image-2000405622393.webp',
+      'https://rimage.ripley.cl/home.ripley/Attachment/WOP/1/2000405622393/image1-2000405622393.webp',
+      'https://rimage.ripley.cl/home.ripley/Attachment/WOP/1/2000405622393/image2-2000405622393.webp'
     ],
     colors: [
       { name: 'Blanco', value: '#FFFFFF', available: true },
@@ -36,8 +37,9 @@ export const products: Product[] = [
     price: 29990,
     originalPrice: 34990,
     images: [
-      'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/4210860/pexels-photo-4210860.jpeg?auto=compress&cs=tinysrgb&w=800'
+      'https://rimage.ripley.cl/home.ripley/Attachment/MKP/2950/MPM10001486120/full_image-3.jpeg',
+      'https://rimage.ripley.cl/home.ripley/Attachment/MKP/2950/MPM10001486120/imagen2-3.jpeg',
+      'https://rimage.ripley.cl/home.ripley/Attachment/MKP/2950/MPM10001486120/imagen3-3.jpeg'
     ],
     colors: [
       { name: 'Arena', value: '#D2B48C', available: true },
@@ -63,8 +65,9 @@ export const products: Product[] = [
     name: 'Pantalón Slim Fit',
     price: 49990,
     images: [
-      'https://images.pexels.com/photos/1240892/pexels-photo-1240892.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/2479312/pexels-photo-2479312.jpeg?auto=compress&cs=tinysrgb&w=800'
+      'https://rimage.ripley.cl/home.ripley/Attachment/MKP/1270/MPM10002942881/full_image-5.jpeg',
+      'https://rimage.ripley.cl/home.ripley/Attachment/MKP/1270/MPM10002942881/imagen2-5.jpeg',
+      'https://rimage.ripley.cl/home.ripley/Attachment/MKP/1270/MPM10002942881/imagen3-5.jpeg'
     ],
     colors: [
       { name: 'Negro', value: '#000000', available: true },
@@ -90,8 +93,9 @@ export const products: Product[] = [
     name: 'Chaqueta Ligera',
     price: 69990,
     images: [
-      'https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/1375849/pexels-photo-1375849.jpeg?auto=compress&cs=tinysrgb&w=800'
+      'https://rimage.ripley.cl/home.ripley/Attachment/MKP/3061/MPM10002880363/full_image-1.jpeg',
+      'https://rimage.ripley.cl/home.ripley/Attachment/MKP/3061/MPM10002880363/imagen2-1.jpeg',
+      'https://rimage.ripley.cl/home.ripley/Attachment/MKP/3061/MPM10002880363/imagen3-1.jpeg'
     ],
     colors: [
       { name: 'Gris', value: '#6B7280', available: true },
@@ -117,8 +121,9 @@ export const products: Product[] = [
     name: 'Hoodie Minimal',
     price: 54990,
     images: [
-      'https://images.pexels.com/photos/4210334/pexels-photo-4210334.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/7148621/pexels-photo-7148621.jpeg?auto=compress&cs=tinysrgb&w=800'
+      'https://media.falabella.com/falabellaCL/17427717_1/w=1500,h=1500,fit=pad',
+      'https://media.falabella.com/falabellaCL/17427717_2/w=1500,h=1500,fit=pad',
+      'https://media.falabella.com/falabellaCL/17427717_3/w=1500,h=1500,fit=pad'
     ],
     colors: [
       { name: 'Negro', value: '#000000', available: true },
@@ -145,8 +150,9 @@ export const products: Product[] = [
     name: 'Jeans Straight',
     price: 59990,
     images: [
-      'https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/3965548/pexels-photo-3965548.jpeg?auto=compress&cs=tinysrgb&w=800'
+      'https://media.falabella.com/falabellaCL/883171134_1/w=1500,h=1500,fit=pad',
+      'https://media.falabella.com/falabellaCL/883171134_2/w=1500,h=1500,fit=pad',
+      'https://media.falabella.com/falabellaCL/883171134_3/w=1500,h=1500,fit=pad'
     ],
     colors: [
       { name: 'Índigo', value: '#4338CA', available: true },
@@ -172,8 +178,9 @@ export const products: Product[] = [
     name: 'Camisa Oxford',
     price: 44990,
     images: [
-      'https://images.pexels.com/photos/2380794/pexels-photo-2380794.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800'
+      'https://rimage.ripley.cl/home.ripley/Attachment/MKP/3313/MPM00024263468/full_image-4.jpeg',
+      'https://rimage.ripley.cl/home.ripley/Attachment/MKP/3313/MPM00024263468/imagen2-4.jpeg',
+      'https://rimage.ripley.cl/home.ripley/Attachment/MKP/3313/MPM00024263468/imagen3-4.jpeg'
     ],
     colors: [
       { name: 'Celeste', value: '#7DD3FC', available: true },
@@ -198,8 +205,9 @@ export const products: Product[] = [
     name: 'Zapatillas Canvas',
     price: 64990,
     images: [
-      'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=800'
+      'https://rimage.ripley.cl/home.ripley/Attachment/MKP/3550/MPM10001953316/full_image-3',
+      'https://rimage.ripley.cl/home.ripley/Attachment/MKP/3550/MPM10001953316/imagen2-3',
+      'https://rimage.ripley.cl/home.ripley/Attachment/MKP/3550/MPM10001953316/imagen4-3'
     ],
     colors: [
       { name: 'Blanco', value: '#FFFFFF', available: false },

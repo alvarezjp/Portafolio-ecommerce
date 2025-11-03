@@ -6,7 +6,7 @@ import { getCategoryProduct } from '../../server/GetProducts';
 import { Category, ProductCategory } from '../../server/Type/interface';
 
 interface Collection {
-
+  id: string,
   name: string;
   description: string;
   image: string;
@@ -21,7 +21,6 @@ const category = [
   "mens-shirts",
   "mens-shoes",
   "mens-watches",
-  "womens-bags",
   "womens-dresses",
   "womens-shoes",
   "womens-watches"
@@ -59,46 +58,26 @@ export function FeaturedCollections() {
   const collections: Collection[] = [
     {
       id: 'basics',
-      name: 'Camisas de hombre',
-      description: 'Esenciales atemporales para tu guardarropa diario',
-      image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800',
+      name: 'Camisetas',
+      description: 'Dale un toque retro a tu look',
+      image: 'https://rimage.ripley.cl/home.ripley/Attachment/WOP/1/2000406332260/image5-2000406332260',
       href: '/collections/basics'
     },
     {
       id: 'basics',
-      name: 'Zapatos de hombre',
-      description: 'Esenciales atemporales para tu guardarropa diario',
-      image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800',
+      name: 'Pantalones',
+      description: 'Descubre la elegancia casual y la comodidad superior con el Pantalon para hombre',
+      image: 'https://media.falabella.com/falabellaCL/883468695_1/w=1500,h=1500,fit=pad',
       href: '/collections/basics'
     },
     {
       id: 'basics',
-      name: 'Relojes de hombre',
-      description: 'Esenciales atemporales para tu guardarropa diario',
-      image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800',
+      name: 'Zapatillas',
+      description: 'Descubre las aventuras sin límites con nuestras zapatillas',
+      image: 'https://media.falabella.com/falabellaCL/144606482_02/w=1500,h=1500,fit=pad',
       href: '/collections/basics'
-    },
-    {
-      id: 'basics',
-      name: 'Relojes de mujer',
-      description: 'Esenciales atemporales para tu guardarropa diario',
-      image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800',
-      href: '/collections/basics'
-    },
-    {
-      id: 'basics',
-      name: 'Zapatos de mujer',
-      description: 'Esenciales atemporales para tu guardarropa diario',
-      image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800',
-      href: '/collections/basics'
-    },
-    {
-      id: 'basics',
-      name: 'Vestidos de mujer',
-      description: 'Esenciales atemporales para tu guardarropa diario',
-      image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800',
-      href: '/collections/basics'
-    },
+    }
+    
     
   ];
 
