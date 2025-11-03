@@ -1,13 +1,11 @@
 import React from 'react';
-import { ArrowRight, Play } from 'lucide-react';
-import { Button } from '../ui/Button';
+import { ArrowDown } from 'lucide-react';
 
 interface HeroProps {
-  onShopNow: () => void;
   onViewCollection: () => void;
 }
 
-export function Hero({ onShopNow, onViewCollection }: HeroProps) {
+export function Hero({ onViewCollection }: HeroProps) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto">
@@ -33,24 +31,14 @@ export function Hero({ onShopNow, onViewCollection }: HeroProps) {
               Diseño atemporal, calidad premium y comodidad excepcional.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                onClick={onShopNow}
-                size="lg" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                icon={<ArrowRight size={20} />}
-              >
-                Comprar ahora
-              </Button>
-              <Button 
+            <div className="flex justify-center max-w-lg pt-4">
+              <button
                 onClick={onViewCollection}
-                variant="outline" 
-                size="lg"
-                className="border-2 border-slate-300 text-slate-700 hover:border-slate-400 hover:bg-slate-50 px-8 py-4 text-lg font-medium rounded-xl transition-all duration-300"
-                icon={<Play size={18} />}
+                aria-label="Explorar colección"
+                className="group h-14 w-14 rounded-full flex items-center justify-center text-slate-600 hover:text-blue-600 transition-all duration-300"
               >
-                Ver colección
-              </Button>
+                <ArrowDown size={24} className="transition-transform duration-300 group-hover:translate-y-1 animate-bounce group-hover:animate-none" />
+              </button>
             </div>
 
             {/* Stats */}
